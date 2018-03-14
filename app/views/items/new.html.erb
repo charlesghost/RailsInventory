@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New</title>
+</head>
+<body>
+<div>
+	<h1>New Item Inventory</h1>
+
+    <%= render 'form', items: @items%>
+    <%=button_to 'Back', items_path, :method => "get"%>
+
+	
+</div>
+</body>
+</html>
