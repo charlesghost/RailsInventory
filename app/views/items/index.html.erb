@@ -1,0 +1,26 @@
+<h1>Sparta Rails Inventory</h1>
+<table>
+	<thead>
+		<tr>Serial Number</tr>
+		<tr>Description</tr>
+		<tr>Supplier</tr>
+		<tr>Status</tr>
+		<tr>Lender</tr>
+		<%= button_to "New Item", new_item_path, :method => "get"%>
+	</thead>
+	<tbody>
+		<%@items.each do |items|%>
+		<tr>
+			<td><%=items.serial_number%></td>
+			<td><%=items.description%></td>
+			<td><%=items.supplier%></td>
+			<td><%=items.status%></td>
+			<td><%=items.lender%></td>
+			<td><%=button_to 'Show', items, :method => "get"%></td>
+			<td><%=button_to 'Edit', edit_item_path(items), :method => "get"%></td>
+			<td><%=button_to 'Destroy', items, method: :delete, data: {confirm: 'Are you sure?'}%></td>
+		</tr>
+		<%end%>
+	</tbody>
+ 
+</table>

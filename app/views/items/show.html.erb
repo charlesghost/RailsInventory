@@ -1,0 +1,26 @@
+<h1>Sparta Rails Inventory</h1>
+<h2>Item Details</h2>
+
+<p>
+	<strong>Serial Number:</strong>
+	<%=@items.serial_number%>
+</p>
+<p>
+	<strong>Description:</strong>
+	<%=@items.description%>
+</p>
+<p>
+    <strong>Supplier:</strong>
+    <%=@items.supplier%>
+</p>
+<p>
+	<strong>Status:</strong>
+	<%=@items.status%>
+</p>
+<p>
+	<strong>Lender:</strong>
+	<%=@items.lender%>
+</p>
+
+<%= button_to "Edit", edit_item_path(@items), :method => "get"%>
+<%= button_to "Back", items_path, :method => "get"%>

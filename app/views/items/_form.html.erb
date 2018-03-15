@@ -1,0 +1,23 @@
+<%= form_for(@items) do |f| %>
+         <p>
+         <%=f.label :serial_number%><br>
+         <%=f.text_field :serial_number%>
+         </p>
+         <p>
+         <%=f.label :description%><br>
+         <%=f.text_field :description%>
+         </p>
+         <p>
+         <%=f.label :supplier%><br>
+         <%=f.text_field :supplier%>
+         </p>
+         <p>
+         <%=f.label :status%><br>
+         <%=f.text_field :status%>
+         </p>
+         <p>
+         <%=f.label :lender%><br>
+         <%=f.text_field :lender%>
+         </p>
+         <%=f.submit%>
+     <%end%>
